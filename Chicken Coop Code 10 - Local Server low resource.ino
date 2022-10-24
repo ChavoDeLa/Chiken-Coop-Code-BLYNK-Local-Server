@@ -12,7 +12,7 @@
 //must come first for some reason, values come from BLYNK .  
 #define BLYNK_TEMPLATE_ID           "0"
 #define BLYNK_DEVICE_NAME           "Chicktroller Local"
-#define BLYNK_AUTH_TOKEN            "CktNDSlrMiBipnwNsoy3E3Izs4gyK6YL"
+#define BLYNK_AUTH_TOKEN            "ENTER AUTH HERE"
 #define W5100_CS  10
 #define SDCARD_CS 4
 #define sensor_resolution 10
@@ -155,7 +155,7 @@ void setup() {
   lcd.clear();
 
   
-  Blynk.begin(auth, IPAddress(192,168,1,76), 8080);
+  Blynk.begin(auth, IPAddress(X,X,X,X), 8080);
   timer.setInterval(1500L, dataoutput);
   timer.setInterval(1000L, blynkoutputtemps);
   timer.setInterval(5000L, blynkoutputtime);
