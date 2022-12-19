@@ -143,7 +143,7 @@ void setup() {
   //begin startup prompts and INFO
 
   lcd.setCursor ( 0, 0 );            // go to the top left corner
-  lcd.print("  The Chicktroller  "); // write this string on the top row
+  lcd.print("  The Chicktroller v10 "); // write this string on the top row
   lcd.setCursor ( 0, 1 );            // go to the 2nd row
   lcd.print("  ESTABLISHED 2022  "); // pad string with spaces for centering
   lcd.setCursor ( 0, 2 );            // go to the third row
@@ -222,7 +222,7 @@ void resetcommand() {
     lcd.print("1..."); // write this string on the top row
     delay(1000);               
     lcd.setCursor ( 0, 0 );            // go to the top left corner
-    lcd.print("SYSTEM HARD RESET...BYE!"); // write this string on the top row
+    lcd.print("SYSTEM RESET...BYE!"); // write this string on the top row
     delay(1000);
     lcd.clear();
     resetFunc(); //call reset
@@ -314,7 +314,7 @@ void dataoutput() {
     lcd.setCursor ( 0, 1 );            // go to the third row
     lcd.print("OUT:"); // pad with spaces for centering
     lcd.setCursor ( 5, 1 );            // go to the fourth row
-    lcd.print(DallasTemperature::toFahrenheit(sensors.getTempC(sensor2)));
+    lcd.print(sensors.getTempC(sensor2));
     lcd.setCursor ( 13, 1 ); 
     lcd.print("t:");
     lcd.setCursor ( 15, 1 );
@@ -322,7 +322,7 @@ void dataoutput() {
     lcd.setCursor ( 0, 2 );
     lcd.print("COOP:");
     lcd.setCursor ( 6, 2 );
-    lcd.print(DallasTemperature::toFahrenheit(sensors.getTempC(sensor3)));
+    lcd.print(sensors.getTempC(sensor3));
     lcd.setCursor ( 12, 2 ); 
     lcd.print("OD:"); // pad with spaces for centering
     lcd.setCursor ( 15, 2 ); 
@@ -339,9 +339,9 @@ void dataoutput() {
 
 
 void blynkoutputtemps (){
-  Blynk.virtualWrite(V4, DallasTemperature::toFahrenheit(sensors.getTempC(sensor1)));
-  Blynk.virtualWrite(V5, DallasTemperature::toFahrenheit(sensors.getTempC(sensor2)));
-  Blynk.virtualWrite(V6, DallasTemperature::toFahrenheit(sensors.getTempC(sensor3)));
+  Blynk.virtualWrite(V4, sensors.getTempC(sensor1));
+  Blynk.virtualWrite(V5, (sensors.getTempC(sensor2));
+  Blynk.virtualWrite(V6, (sensors.getTempC(sensor3));
 }
 
 void blynkoutputdoors (){
