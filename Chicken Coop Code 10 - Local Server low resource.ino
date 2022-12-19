@@ -314,7 +314,7 @@ void dataoutput() {
     lcd.setCursor ( 0, 1 );            // go to the third row
     lcd.print("OUT:"); // pad with spaces for centering
     lcd.setCursor ( 5, 1 );            // go to the fourth row
-    lcd.print(DallasTemperature::toFahrenheit(sensors.getTempC(sensor2)));
+    lcd.print(sensors.getTempC(sensor2));
     lcd.setCursor ( 13, 1 ); 
     lcd.print("t:");
     lcd.setCursor ( 15, 1 );
