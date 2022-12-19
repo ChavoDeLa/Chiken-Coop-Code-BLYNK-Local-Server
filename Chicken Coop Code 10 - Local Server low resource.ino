@@ -143,7 +143,7 @@ void setup() {
   //begin startup prompts and INFO
 
   lcd.setCursor ( 0, 0 );            // go to the top left corner
-  lcd.print("  The Chicktroller  "); // write this string on the top row
+  lcd.print("  The Chicktroller v10 "); // write this string on the top row
   lcd.setCursor ( 0, 1 );            // go to the 2nd row
   lcd.print("  ESTABLISHED 2022  "); // pad string with spaces for centering
   lcd.setCursor ( 0, 2 );            // go to the third row
@@ -222,7 +222,7 @@ void resetcommand() {
     lcd.print("1..."); // write this string on the top row
     delay(1000);               
     lcd.setCursor ( 0, 0 );            // go to the top left corner
-    lcd.print("SYSTEM HARD RESET...BYE!"); // write this string on the top row
+    lcd.print("SYSTEM RESET...BYE!"); // write this string on the top row
     delay(1000);
     lcd.clear();
     resetFunc(); //call reset
